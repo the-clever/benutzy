@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown ke 9 Agustus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-900 text-white">
+
+    <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Birthday in:</h1>
+        <div class="text-lg text-gray-400 mb-6" id="target-date"></div>
+
+        <!-- Countdown Timer -->
+        <div class="grid grid-cols-4 gap-4 text-center">
+            <div>
+                <div class="text-5xl font-bold" id="days">00</div>
+                <div class="text-sm text-gray-400">Hari</div>
+            </div>
+            <div>
+                <div class="text-5xl font-bold" id="hours">00</div>
+                <div class="text-sm text-gray-400">Jam</div>
+            </div>
+            <div>
+                <div class="text-5xl font-bold" id="minutes">00</div>
+                <div class="text-sm text-gray-400">Menit</div>
+            </div>
+            <div>
+                <div class="text-5xl font-bold" id="seconds">00</div>
+                <div class="text-sm text-gray-400">Detik</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            let targetYear = now.getFullYear();
+            let targetDate = new Date(targetYear, 7, 9, 0, 0, 0); // 7 = Agustus (0-based index)
+
+            // Jika 9 Agustus sudah lewat, set ke tahun berikutnya
+            if (now > targetDate) {
+                targetYear += 1;
+                targetDate = new Date(targetYear, 7, 9, 0, 0, 0);
+            }
+
+
+            let diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Jalankan saat halaman dimuat pertama kali
+    </script>
+
+</body>
+</html>

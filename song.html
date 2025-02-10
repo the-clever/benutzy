@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-900 text-white">
+
+    <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Pemutar Lagu Acak</h1>
+        
+        <!-- Menampilkan Judul Lagu -->
+        <div class="text-lg text-gray-300 mb-4" id="song-title">Tidak ada lagu yang diputar</div>
+        
+        <!-- Tombol Play Random -->
+        <button onclick="playRandomSong()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+            Putar Lagu Acak 🎵
+        </button>
+
+        <!-- Audio Player (Tersembunyi) -->
+        <audio id="audio-player" onended="playRandomSong()"></audio>
+    </div>
+
+    <script>
+        // Daftar Lagu (Ganti dengan URL lagu kamu)
+        const songs = [
+            { title: "Lagu 1", src: "lagu1.mp3" },
+            { title: "Lagu 2", src: "lagu2.mp3" },
+            { title: "Lagu 3", src: "lagu3.mp3" }
+        ];
+
+        function playRandomSong() {
+            if (songs.length === 0) return;
+
+            // Pilih lagu secara acak
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            const randomSong = songs[randomIndex];
+
+            // Atur dan putar lagu
+            const audioPlayer = document.getElementById("audio-player");
+            audioPlayer.src = randomSong.src;
+            audioPlayer.play();
+
+            // Tampilkan judul lagu
+            document.getElementById("song-title").innerText = `Sedang diputar: ${randomSong.title}`;
+        }
+    </script>
+
+</body>
+</html>
+
+<div class="navbar-end p-6">
+    
+  </div>
