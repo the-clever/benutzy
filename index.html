@@ -67,24 +67,24 @@
         transform: scale(1.1);
         cursor: pointer;
         color: rgb(1, 10, 12);
-        background-color: aqua;
-        box-shadow: 0 0 30px 20px rgb(53, 225, 248);
+        background-color: grey;
+        box-shadow: 0 0 30px 20px rgb(54, 54, 54);
       }
 
       #wa:hover {
         transform: scale(1.1);
         cursor: pointer;
         color: rgb(1, 10, 12);
-        background-color: aqua;
-        box-shadow: 0 0 30px 20px rgb(53, 225, 248);
+        background-color: grey;
+        box-shadow: 0 0 30px 20px rgb(54, 54, 54);
       }
 
       #fb:hover {
         transform: scale(1.1);
         cursor: pointer;
         color: rgb(1, 10, 12);
-        background-color: aqua;
-        box-shadow: 0 0 30px 20px rgb(53, 225, 248);
+        background-color: grey;
+        box-shadow: 0 0 30px 20px rgb(54, 54, 54);
       }
     </style>
 </head>
@@ -115,25 +115,27 @@
                 <li><a href="#">Contact</a></li>
             </ul>
           </div>
-          <a class="text-3xl px-4" style="font-family: Pacifico, serif;">BenuTzy</a>
+          <a class="text-3xl px-4" style="font-family: Pacifico, serif;" href="#home">BenuTzy</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a href="#" id="menu1" style="font-family: Zen Dots, serif;">About me</a></li>
+            <li><a href="#introduce" id="menu1" style="font-family: Zen Dots, serif;">About me</a></li>
             <li><a href="#" id="menu2" style="font-family: Zen Dots, serif;">Study</a></li>
             <li><a href="#" id="menu3" style="font-family: Zen Dots, serif;">Experience</a></li>
             <li><a href="#" id="menu4" style="font-family: Zen Dots, serif;">Contact</a></li>
           </ul>
         </div>
-        <div class="navbar-end"></div>
+        <div class="navbar-end" id="root"></div>
       </div>
 
-      <div class="hero bg-base-200 min-h-screen">
+      <div class="hero bg-base-200 min-h-screen" id="home">
         <div class="hero-content flex-col lg:flex-row">       
           <div class="px-10 py-10 animate__animated animate__backInLeft animate__delay-0.5s">
-            <h1 class="text-5xl font-bold">Hello...! <span style="color: aqua; font-family: Audiowide, serif;">I'm Benuu</span></h1>
+            <h1 class="text-5xl font-bold"><span style="color: aqua; font-family: Audiowide, serif;">Benu</span> SlaluAlways.</h1>
             <p class="py-6">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> A odio quisquam illum provident. Ratione, laudantium!
+              Semua yang ada dalam website ini hanyalah gimmick.
+              <br>
+              Terima kasih sudah berkunjung ke website yang monoton ini.
             </p>
             <div class="text-center p-2 bg-gray-800 rounded-lg shadow-lg animate__animated animate__backInLeft animate__delay-1s">
               <h1 class="text-2xl font-bold mb-4">Birthday in:</h1>
@@ -142,19 +144,19 @@
               <div class="grid grid-cols-4 gap-4 text-center">
                   <div>
                       <div class="text-2xl font-bold" id="days">00</div>
-                      <div class="text-sm text-gray-400">Hari</div>
+                      <div class="text-sm text-gray-400">Day</div>
                   </div>
                   <div>
                       <div class="text-2xl font-bold" id="hours">00</div>
-                      <div class="text-sm text-gray-400">Jam</div>
+                      <div class="text-sm text-gray-400">Hours</div>
                   </div>
                   <div>
                       <div class="text-2xl font-bold" id="minutes">00</div>
-                      <div class="text-sm text-gray-400">Menit</div>
+                      <div class="text-sm text-gray-400">Minutes</div>
                   </div>
                   <div>
                       <div class="text-2xl font-bold" id="seconds">00</div>
-                      <div class="text-sm text-gray-400">Detik</div>
+                      <div class="text-sm text-gray-400">Seconds</div>
                   </div>
               </div>
           </div>
@@ -179,12 +181,21 @@
         <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict1.png">
       </div>
 
-      <div class="flex justify-center bg-base-200 px-10 py-10">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis facilis neque? Dignissimos voluptate qui fuga, quibusdam molestias obcaecati id vero labore autem omnis quas maiores accusamus soluta beatae similique vel optio magnam sint ad hic exercitationem quis ipsa nobis debitis. Dolores sit labore error nam optio exercitationem sed doloremque.</p>
+      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify" id="introduce">
+        <p>Muhammad Ibnu Rojab laki-laki yang akrab dipanggil Ibnu/Benu lahir tepat 61 tahun setelah kota Hiroshima dibom atom oleh Amerika. Ibnu sangan hobi bermain game online dari masing-masing genre yang berbeda-beda, untuk game yang paling disukainya adalah game yang bergenre MOBA seperti <b><i>Mobile Legend</i></b>, sedangkan untuk yang bergenre Battle-royale yaitu <b><i>Blood Strike</i></b>. Namun dibalik hobinya sebagai gamer, Ibnu juga memiliki hobi yang tidak kalah menarik yaitu Coding. Ibnu menjadikan keduanya sebagai hobi karena Ibnu ingin menjadi seorang <b><i>Game Developer</i></b> di masa depan, sekaligus kedua hobinya tersebut juga dapat menemaninya ketika sedang merasa sendiri.</p> 
       </div>
 
-      <div class="flex justify-center bg-base-200 px-10 py-10">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3Sh2zuPodrMli6xtlEzR2m?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <div class="hero bg-base-200">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img
+            src="sukuna.png"
+            class="max-w-sm rounded-lg" />
+          <div>
+            <p class="py-10 px-10 text-justify">
+              Selain kedua hobi tersebut Ibnu juga menyukai anime seperti <b><i>Jujutsu Kaisen</i></b>, karakter favoritnya adalah Ryomen Sukuna. Mengapa Sukuna? karena dibalik karakter yang memiliki peran antagonisnya, Sukuna memiliki kisah perjalanan hidup yang mengajarkan kita bahwa belajar tidak ada hentinya demi mendapatkan kekuatan terbesar. Dibandingkan Gojo yang sudah memiliki kekuatan bawaan sejak lahir. Seseorang yang terlahir di puncak tidak akan memahami bagaimana rasanya berada di titik yang paling bawah.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="flex justify-center bg-base-200 py-5">
@@ -258,6 +269,16 @@
             <div class="timeline-end timeline-box">UINSATU</div>
           </li>
         </ul>
+      </div>
+
+      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify" id="introduce">
+        <p>Ibnu lahir di kota Lamongan yang tak lama setelah kelahirannya dia dibawa dan di besarkan di kota Tangerang. Pada tahun 2010 Ibnu mengawali pendidikannya di TK-RA Al-Ikhwan di usianya yang masih 4 tahun. Yang menjadi spesial-nya Ibnu saat itu adalah dia sudah bisa membaca dan menulis dari sebelum dia masuk TK. Setelah 2 tahun di TK, Ibnu melanjutkan studi di SDN Talagasari 1 Balaraja. Memang tidak ada prestasi yang didapatkan, tetapi Ibnu pernah 2x menjadi perwakilan lomba cerdas cermat PAI. Semua itu karena Ibnu sudah mendapatkan bekal pendidikan agama sejak kecil dari orang tuanya.
+        </p> 
+      </div>
+
+      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify" id="introduce">
+        <p>Enam tahun berlalu dan Ibnu harus ikut kedua orang tuanya pindah ke kampung halamannya di Lamongan untuk melanjutkan sekolahnya di MTs. Darul Hikam, meninggalkan teman-teman dan lingkungan yang jauh dari perkotaan. Dan di saat itulah kebodohan dan sifat malas menyerang. Bayangkan saja siswa yang selalu masuk 5 besar di kelasnya, kini menjadi seorang yang memiliki sifat pemalas karena terpengaruh oleh teman di sekitarnya.
+        </p> 
       </div>
 
       <div class="flex justify-center bg-base-200 py-5">
@@ -360,32 +381,32 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown(); // Jalankan saat halaman dimuat pertama kali
-    </script>
+      </script>
 
-<script>
-  const text = "Halo, saya ChatGPT!";
-  let index = 0;
-  let isDeleting = false;
+      <script>
+        const text = "Halo, saya ChatGPT!";
+        let index = 0;
+        let isDeleting = false;
 
-  function typeEffect() {
-    const element = document.getElementById("typingText");
-    if (isDeleting) {
-      element.textContent = text.substring(0, index--);
-    } else {
-      element.textContent = text.substring(0, index++);
-    }
+        function typeEffect() {
+          const element = document.getElementById("typingText");
+          if (isDeleting) {
+            element.textContent = text.substring(0, index--);
+          } else {
+            element.textContent = text.substring(0, index++);
+          }
 
-    if (index > text.length) {
-      isDeleting = true;
-    } else if (index < 0) {
-      isDeleting = false;
-    }
+          if (index > text.length) {
+            isDeleting = true;
+          } else if (index < 0) {
+            isDeleting = false;
+          }
 
-    setTimeout(typeEffect, isDeleting ? 100 : 150);
-  }
+          setTimeout(typeEffect, isDeleting ? 100 : 150);
+        }
 
-  typeEffect();
-</script>
+        typeEffect();
+      </script>
       <!-- Library JS -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
