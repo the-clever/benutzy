@@ -61,6 +61,10 @@
       #box {
           animation: zoom-in 1s ease-out, spin 5s linear infinite;
       }
+
+      #project:hover {
+        transform: scale(0.9);
+      }
     </style>
 </head>
 <body>
@@ -100,41 +104,69 @@
             <li><a href="#contact" id="menu4" style="font-family: Zen Dots, serif;">Contact</a></li>
           </ul>
         </div>
-        <div class="navbar-end" id="root"></div>
+        <div class="navbar-end" id="root">
+          <div class="flex justify-center mr-5">
+            <button id="music-toggle" class="bg-base-100 text-white w-full h-full rounded-full shadow-lg flex items-center justify-center hover:bg-base-200 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            </svg>
+            </button>
+          </div>
+
+          <!-- Audio file -->
+          <audio id="bg-music" loop>
+            <source src="8 Letters.mp3" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
 
       <div class="hero bg-base-200 h-screen md:w-full" id="home">
         <div class="hero-content flex-col lg:flex-row">       
           <div class="px-4 animate__backInLeft animate__delay-0.5s">
             <h1 class="text-5xl font-bold"><span style="color: aqua; font-family: Audiowide, serif;">Benu</span> SlaluAlways.</h1>
-            <p class="py-6">
-              Terima kasih sudah berkunjung ke website yang monoton ini.
-              <br>
-              Saya harap anda tahu mana yang <i>gimmick</i> atau tidak
+            <p class="typewrite py-6 text-xl" data-period="2000" data-type='[ "Terimakasih sudah berkunjung ke website saya.", "Semoga anda tahu mana yang gimmick dan fakta."]'>
+              <span class="wrap"></span>
             </p>
-            <div class="text-center p-2 bg-gray-800 rounded-lg shadow-lg animate__animated animate__backInLeft animate__delay-1s" style="font-family: Acme, sans-serif; font-weight: 600; font-style: normal;">
-              <h1 class="text-2xl font-bold mb-4">Birthday in:</h1>
-              <div class="text-gray-400 mb-6" id="target-date"></div>
-              <!-- Countdown Timer -->
-              <div class="grid grid-cols-4 gap-4 text-center">
-                  <div>
-                      <div class="text-2xl font-bold" id="days">00</div>
-                      <div class="text-sm text-gray-400">Day</div>
-                  </div>
-                  <div>
-                      <div class="text-2xl font-bold" id="hours">00</div>
-                      <div class="text-sm text-gray-400">Hours</div>
-                  </div>
-                  <div>
-                      <div class="text-2xl font-bold" id="minutes">00</div>
-                      <div class="text-sm text-gray-400">Minutes</div>
-                  </div>
-                  <div>
-                      <div class="text-2xl font-bold" id="seconds">00</div>
-                      <div class="text-sm text-gray-400">Seconds</div>
-                  </div>
+            <div class="text-center p-6 rounded-xl shadow-2xl text-white animate__animated animate__backInLeft animate__delay-1s">
+              <h1 class="text-3xl font-bold mb-4 text-teal-400">Birthday in:</h1>
+
+              <div class="flex justify-center items-center gap-4 text-center text-2xl">
+                <!-- Days -->
+                <div>
+                  <div class="text-teal-300 font-bold" id="days">00</div>
+                  <div class="text-xs text-gray-400">Days</div>
+                </div>
+
+                <!-- Separator -->
+                <div class="text-pink-400 font-bold text-3xl">:</div>
+
+                <!-- Hours -->
+                <div>
+                  <div class="text-emerald-300 font-bold" id="hours">00</div>
+                  <div class="text-xs text-gray-400">Hours</div>
+                </div>
+
+                <!-- Separator -->
+                <div class="text-pink-400 font-bold text-3xl">:</div>
+
+                <!-- Minutes -->
+                <div>
+                  <div class="text-yellow-300 font-bold" id="minutes">00</div>
+                  <div class="text-xs text-gray-400">Minutes</div>
+                </div>
+
+                <!-- Separator -->
+                <div class="text-pink-400 font-bold text-3xl">:</div>
+
+                <!-- Seconds -->
+                <div>
+                  <div class="text-red-300 font-bold" id="seconds">00</div>
+                  <div class="text-xs text-gray-400">Seconds</div>
+                </div>
               </div>
-          </div>
+            </div>
+
+
           </div>
           <div class="relative w-64 h-64">
             <!-- Foto Background -->
@@ -251,10 +283,62 @@
         </p> 
       </div>
 
+      <!-- <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DIqceh6RNLb/" data-instgrm-version="14" style=" background: transparent; border:0; border-radius:3px; margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+      <script async src="https://www.instagram.com/embed.js"></script>
+      </div> -->
+
       <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
         <p>Enam tahun berlalu dan Ibnu harus ikut kedua orang tuanya pindah ke kampung halamannya di Lamongan untuk melanjutkan sekolahnya di MTs. Darul Hikam, meninggalkan teman-teman dan lingkungan yang jauh dari perkotaan. Dan di saat itulah kebodohan dan sifat malas menyerang. Bayangkan saja siswa yang selalu masuk 5 besar di kelasnya, kini menjadi seorang yang memiliki sifat pemalas karena terpengaruh oleh teman di sekitarnya. Namun mulai dari MTs. Ibnu mengekan teknologi digital karena adanya mata pelajaran TIK, sejak saat itu mulai tertarik dengan yang namanya teknologi.
         </p> 
       </div>
+
+      <div class="flex justify-center bg-base-200 py-5" id="study">
+        <h2 data-aos="fade-up" data-aos-once="true" class="text-3xl font-bold" style="color: aqua; font-family: Audiowide, serif;">Project-Based Learning</h2>
+      </div>
+
+        <div class="bg-base-200 py-16 px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              
+              <div id="project" class="bg-base-100 rounded-xl shadow-md p-4">
+                <a href="https://the-clever.github.io/space-library-d/">
+                <h3 class="text-xl font-semibold">E-Perpustakaan</h3>
+                <p class="text-sm text-gray-600 mb-2">Website yang memudahkan orang mencari dan membaca buku (progress 60%)</p>
+                </a>
+              </div>
+
+              <div id="project" class="bg-base-100 rounded-xl shadow-md p-4">
+                <a href="#">
+                <h3 class="text-xl font-semibold">Lorem, ipsum dolor. </h3>
+                <p class="text-sm text-gray-600 mb-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quae ut animi.</p>
+                </a>
+              </div>
+
+              <div id="project" class="bg-base-100 rounded-xl shadow-md p-4">
+                <a href="#">
+                <h3 class="text-xl font-semibold">Project Dua</h3>
+                <p class="text-sm text-gray-600 mb-2">Landing page UI responsive dengan Tailwind.</p>
+                </a>
+              </div>
+
+              <div id="project" class="bg-base-100 rounded-xl shadow-md p-4">
+                <a href="#">
+                <h3 class="text-xl font-semibold">Project Dua</h3>
+                <p class="text-sm text-gray-600 mb-2">Landing page UI responsive dengan Tailwind.</p>
+                </a>
+              </div>
+
+              <div id="project" class="bg-base-100 rounded-xl shadow-md p-4">
+                <a href="#">
+                <h3 class="text-xl font-semibold">Project Dua</h3>
+                <p class="text-sm text-gray-600 mb-2">Landing page UI responsive dengan Tailwind.</p>
+                </a>
+              </div>
+
+            </div>
+        </div>
+
+
 
       <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
         <p>Karena ketertarikannya dengan teknologi, setelah lulus akhirnya dia melanjutkan study di MA Matholi'ul Anwar dan mengambil jurusan MIPA-TI. Hehehe.... sebenarnya Ibnu ambil jurusan MIPA-TI bukan karena kemauannya, tetapi karena ikut-ikut temannya saja, tapi anehnya Ibnu justru yang malah terpilih sedangkan temannya tidak. Awal-awal memang Ibnu hanya belajar tentang <i>Microsoft Office</i>, tetapi ada di suatu waktu Ibnu mengikuti Mawar.Dev, yaitu ekstrakurukuler yang mengajarkan <i>web development</i>. Ibnu belajar selama 1 tahun, yahhh.... walaupun hanya sampai HTML dan CSS. Tiba di semester terkhir Ibnu pun mulai mempersiapkan kelulusannya sembari memilih kampus impiannya untuk SNBP, namun tak lama selang waktu itu kabar menyedihkan tiba, yaitu Ibnu tidak memenuhi kriteria siswa eligible. Impiannya untuk menjadi <i><b>Front-End Developer</b></i> seakan sirna. Akhirnya Ibnu mengambil jalan ninja dengan ikut jalur SPAN-PTKIN di UINSATU Tulungagung program studi Kumunikasi dan Penyiaran Islam. Dengan jiwa pantang menyerahnya Ibnu tetap melanjutkan belajar coding walaupun dengan jalur otodidak.
@@ -341,8 +425,120 @@
             <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">Developed by <a href="#" class="hover:underline">BenuTzy</a>. All Rights Reserved.</span>
         </div>
       </footer>
+      <!-- Notification Container -->
+      <div id="connection-status" class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden px-6 py-3 rounded-xl text-white text-sm font-semibold shadow-lg transition-all duration-500"></div>
 
 
+<!-- notifikasi online dan offline -->
+      <script>
+        const statusBar = document.getElementById("connection-status");
+
+        function showStatus(message, colorClass) {
+          statusBar.textContent = message;
+          statusBar.className = `fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-xl text-white text-sm font-semibold shadow-lg transition-all duration-500 ${colorClass}`;
+          statusBar.classList.remove("hidden");
+
+          setTimeout(() => {
+            statusBar.classList.add("hidden");
+          }, 4000);
+        }
+
+        window.addEventListener("online", () => {
+          showStatus("🔌 Koneksi internet tersambung kembali", "bg-green-500");
+        });
+
+        window.addEventListener("offline", () => {
+          showStatus("⚠️ Anda sedang offline", "bg-red-500");
+        });
+      </script>
+
+<!-- audio -->
+      <script>
+        const musicToggle = document.getElementById('music-toggle');
+        const bgMusic = document.getElementById('bg-music');
+        let isPlaying = false;
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicToggle.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                    </svg>
+                `;
+            } else {
+                bgMusic.play();
+                musicToggle.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    </svg>
+                `;
+            }
+            isPlaying = !isPlaying;
+        });
+      </script>
+
+
+<!-- animasi menghapus dan mengetik -->
+      <script>
+        var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+      </script>
       
       <script>
         function updateCountdown() {
