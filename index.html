@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Audiowide&family=Pacifico&family=Zen+Dots&display=swap" rel="stylesheet">
 
     <!-- library -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -19,56 +16,85 @@
     <link rel="shortcut icon" href="picsart1.png" type="image/x-icon">
     <title>BenuuTzy</title>
     <style>
-      #menu1:hover {
-        background-color: gray;
-        color: rgb(43, 43, 43);
-        font-weight: bold;
+      /* Loading Effect */
+            /* Wrapper utama untuk menutupi seluruh layar sebelum page selesai dimuat */
+      #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0b0c10; /* Menyesuaikan background portfolio gelap Anda */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999; /* Memastikan loader berada di paling depan */
+        transition: opacity 0.5s ease, visibility 0.5s ease;
       }
 
-      #menu2:hover {
-        background-color: gray;
-        color: rgb(43, 43, 43);
-        font-weight: bold;
+      .hole {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
       }
 
-      #menu3:hover {
-        background-color: gray;
-        color: rgb(43, 43, 43);
-        font-weight: bold;
+      .hole i {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 140px;
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.05); /* Sedikit warna dasar agar efek ring terlihat jelas */
+        animation-name: scaleHole;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
       }
 
-      #menu4:hover {
-        background-color: gray;
-        color: rgb(43, 43, 43);
-        font-weight: bold;
-      }
+      /* Delay animasi untuk setiap elemen lingkaran */
+      .hole i:nth-child(1) { animation-delay: 0.3s; }
+      .hole i:nth-child(2) { animation-delay: 0.6s; }
+      .hole i:nth-child(3) { animation-delay: 0.9s; }
+      .hole i:nth-child(4) { animation-delay: 1.2s; }
+      .hole i:nth-child(5) { animation-delay: 1.5s; }
+      .hole i:nth-child(6) { animation-delay: 1.8s; }
+      .hole i:nth-child(7) { animation-delay: 2.1s; }
+      .hole i:nth-child(8) { animation-delay: 2.4s; }
+      .hole i:nth-child(9) { animation-delay: 2.7s; }
+      .hole i:nth-child(10) { animation-delay: 3s; }
 
-      #boy:hover {
-        transform: scale(.8);
-        transition: .5s ease;
-      }
-
-      @keyframes zoom-in {
-        0% { transform: scale(0.5); opacity: 0; }
-        100% { transform: scale(1); opacity: 1; }
-      }
-
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-
-      #box {
-          animation: zoom-in 1s ease-out, spin 5s linear infinite;
-      }
-
-      #project:hover {
-        transform: scale(0.9);
+      @keyframes scaleHole {
+        0% {
+          transform: scale(2);
+          opacity: 0;
+          box-shadow: 0px 0px 50px rgba(34, 211, 238, 0.5); /* Diubah ke warna cyan agar cocok dengan tema Anda */
+        }
+        50% {
+          transform: scale(1) translate(0px, -5px);
+          opacity: 1;
+          box-shadow: 0px 8px 20px rgba(99, 102, 241, 0.5); /* Transisi ke warna indigo */
+        }
+        100% {
+          transform: scale(0.1) translate(0px, 5px);
+          opacity: 0;
+          box-shadow: 0px 10px 20px rgba(255, 255, 255, 0);
+        }
       }
     </style>
 </head>
 <body>
-    <div class="navbar bg-base-100 sticky top-0 z-50 animate__animated animate__fadeInDown">
+    <!-- Loading Effect -->
+    <!-- Elemen Loader -->
+    <div id="loader-wrapper">
+      <div class="hole">
+        <i></i><i></i><i></i><i></i><i></i>
+        <i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </div>
+
+    <div class="navbar bg-base-100 sticky top-0 z-50">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -120,62 +146,16 @@
         </div>
       </div>
 
-      <div class="hero bg-base-200 h-screen md:w-full" id="home">
-        <div class="hero-content flex-col lg:flex-row">       
-          <div class="px-4 animate__backInLeft animate__delay-0.5s">
-            <h1 class="text-5xl font-bold"><span style="color: aqua; font-family: Audiowide, serif;">Benu</span> SlaluAlways.</h1>
-            <p class="typewrite py-6 text-xl" data-period="2000" data-type='[ "Terimakasih sudah berkunjung ke website saya.", "Semoga anda tahu mana yang gimmick dan fakta."]'>
-              <span class="wrap"></span>
-            </p>
-            <div class="text-center p-6 rounded-xl shadow-2xl text-white animate__animated animate__backInLeft animate__delay-1s">
-              <h1 class="text-3xl font-bold mb-4 text-teal-400">Birthday in:</h1>
-
-              <div class="flex justify-center items-center gap-4 text-center text-2xl">
-                <!-- Days -->
-                <div>
-                  <div class="text-teal-300 font-bold" id="days">00</div>
-                  <div class="text-xs text-gray-400">Days</div>
-                </div>
-
-                <!-- Separator -->
-                <div class="text-pink-400 font-bold text-3xl">:</div>
-
-                <!-- Hours -->
-                <div>
-                  <div class="text-emerald-300 font-bold" id="hours">00</div>
-                  <div class="text-xs text-gray-400">Hours</div>
-                </div>
-
-                <!-- Separator -->
-                <div class="text-pink-400 font-bold text-3xl">:</div>
-
-                <!-- Minutes -->
-                <div>
-                  <div class="text-yellow-300 font-bold" id="minutes">00</div>
-                  <div class="text-xs text-gray-400">Minutes</div>
-                </div>
-
-                <!-- Separator -->
-                <div class="text-pink-400 font-bold text-3xl">:</div>
-
-                <!-- Seconds -->
-                <div>
-                  <div class="text-red-300 font-bold" id="seconds">00</div>
-                  <div class="text-xs text-gray-400">Seconds</div>
-                </div>
-              </div>
-            </div>
-
-
+      <div class="hero bg-base-200 h-screen md:w-full text-center" id="home">      
+          <!-- Menambahkan w-full dan max-w untuk mengunci area horizontal -->
+          <div class="w-full max-w-xl mx-auto px-4">
+            <h1 class="text-2xl font-semibold text-gray-400">You can call me</h1>
+            <h1 class="typewrite py-6 text-4xl sm:text-5xl block min-h-[110px] mx-auto layout-stable" 
+                style="color: aqua; font-family: Audiowide, serif;" 
+                data-period="2000" 
+                data-type='[ "Ryomen Benu", "Avicenna"]'>
+            </h1>
           </div>
-          <div class="relative w-64 h-64">
-            <!-- Foto Background -->
-            <img src="shape.png" class="w-full h-full object-cover rounded-lg" id="box">
-        
-            <!-- Foto di atas (Overlay) -->
-            <img src="picsart1.png" class="absolute top-0 left-0 w-full h-full rounded-full  animate__animated animate__zoomIn animate__delay-2s" id="boy">
-          </div> 
-        </div>
       </div>
 
       <div class="flex flex-wrap justify-center bg-base-200 py-10 gap-4">
@@ -492,61 +472,15 @@
         document.body.appendChild(css);
     };
       </script>
-      
+
+      <!-- Typing Effect -->
       <script>
-        function updateCountdown() {
-            const now = new Date();
-            let targetYear = now.getFullYear();
-            let targetDate = new Date(targetYear, 7, 9, 0, 0, 0); // 7 = Agustus (0-based index)
-
-            // Jika 9 Agustus sudah lewat, set ke tahun berikutnya
-            if (now > targetDate) {
-                targetYear += 1;
-                targetDate = new Date(targetYear, 7, 9, 0, 0, 0);
-            }
-
-
-            let diff = targetDate - now;
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerText = days;
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Jalankan saat halaman dimuat pertama kali
-      </script>
-
-      <script>
-        const text = "Halo, saya ChatGPT!";
-        let index = 0;
-        let isDeleting = false;
-
-        function typeEffect() {
-          const element = document.getElementById("typingText");
-          if (isDeleting) {
-            element.textContent = text.substring(0, index--);
-          } else {
-            element.textContent = text.substring(0, index++);
-          }
-
-          if (index > text.length) {
-            isDeleting = true;
-          } else if (index < 0) {
-            isDeleting = false;
-          }
-
-          setTimeout(typeEffect, isDeleting ? 100 : 150);
-        }
-
-        typeEffect();
-        
+        // Menghilangkan efek loading setelah seluruh halaman selesai dimuat sepenuhnya
+        window.addEventListener('load', () => {
+          const loader = document.getElementById('loader-wrapper');
+          loader.style.opacity = '0';
+          loader.style.visibility = 'hidden';
+        });
       </script>
       <!-- Library JS -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
