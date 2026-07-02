@@ -147,135 +147,301 @@
       </div>
 
       <div class="hero bg-base-200 h-screen md:w-full text-center" id="home">      
-          <!-- Menambahkan w-full dan max-w untuk mengunci area horizontal -->
-          <div class="w-full max-w-xl mx-auto px-4">
-            <h1 class="text-2xl font-semibold text-gray-400">You can call me</h1>
+          <!-- Container Utama -->
+          <div class="w-full max-w-xl mx-auto px-4 flex flex-col items-center">
+            
+            <!-- Sub-heading -->
+            <h1 class="text-xl font-semibold text-gray-400">You can call me</h1>
+            
+            <!-- Typing Effect (Tinggi Terkunci & Stabil) -->
             <h1 class="typewrite py-6 text-4xl sm:text-5xl block min-h-[110px] mx-auto layout-stable" 
                 style="color: aqua; font-family: Audiowide, serif;" 
                 data-period="2000" 
                 data-type='[ "Ryomen Benu", "Avicenna"]'>
             </h1>
+
+            <!-- 2 Tombol CTA (Instagram & TikTok) -->
+            <div class="flex flex-wrap justify-center gap-4 mt-2" data-aos="fade-up" data-aos-delay="300">
+              
+              <!-- CTA Instagram -->
+              <a href="https://www.instagram.com/benuforbidden" target="_blank" 
+                class="px-6 py-3 rounded-xl bg-base-100 text-white font-medium text-sm border border-cyan-500/30 tracking-wide transition-all duration-200 hover:shadow-[inset_0_4px_12px_rgba(0,0,0,0.8)]">
+                  Instagram
+              </a>
+              
+              <!-- CTA TikTok -->
+              <a href="https://www.tiktok.com/@benuforbidden" target="_blank" 
+                class="px-6 py-3 rounded-xl bg-base-100 text-white font-medium text-sm border border-cyan-500/30 tracking-wide transition-all duration-200 hover:shadow-[inset_0_4px_12px_rgba(0,0,0,0.8)]">
+                  TikTok
+              </a>
+
+            </div>
           </div>
       </div>
 
-      <div class="flex flex-wrap justify-center bg-base-200 py-10 gap-4">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict2.png">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict6.png">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict7.png">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict5.png">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict4.png">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict3.png">
-        <img data-aos="flip-left" data-aos-once="true" data-aos-duration="2000" class="w-24 mask mask-squircle bg-gray-800" src="pict1.png">
-      </div>
-
-      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify" id="introduce">
-        <p>Muhammad Ibnu Rojab laki-laki yang akrab dipanggil Ibnu/Benu lahir tepat 61 tahun setelah kota Hiroshima dibom atom oleh Amerika. Ibnu sangan hobi bermain game online dari masing-masing genre yang berbeda-beda, untuk game yang paling disukainya adalah game yang bergenre MOBA seperti <b><i>Mobile Legend</i></b>, sedangkan untuk yang bergenre Battle-royale yaitu <b><i>Blood Strike</i></b>. Namun dibalik hobinya sebagai gamer, Ibnu juga memiliki hobi yang tidak kalah menarik yaitu Coding. Ibnu menjadikan keduanya sebagai hobi karena Ibnu ingin menjadi seorang <b><i>Game Developer</i></b> di masa depan, sekaligus kedua hobinya tersebut juga dapat menemaninya ketika sedang merasa sendiri.</p> 
-      </div>
-
-      <div class="hero bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse md:w-full">
-          <img
-            src="sukuna.png"
-            class="max-w-sm rounded-lg lg:max-w-md md:max-w-xs" style="width: 70%; height: 70%;" />
-          <div class="lg:ml-4 md:ml-2 px-5 py-10">
-            <p class="text-justify lg:text-lg md:text-base">
-              Selain kedua hobi tersebut Ibnu juga menyukai anime seperti <b><i>Jujutsu Kaisen</i></b>, karakter favoritnya adalah Ryomen Sukuna. Mengapa Sukuna? karena dibalik karakter yang memiliki peran antagonisnya, Sukuna memiliki kisah perjalanan hidup yang mengajarkan kita bahwa belajar tidak ada hentinya demi mendapatkan kekuatan terbesar. Dibandingkan Gojo yang sudah memiliki kekuatan bawaan sejak lahir. Seseorang yang terlahir di puncak tidak akan memahami bagaimana rasanya berada di titik yang paling bawah.
+      <div class="bg-base-200 py-16 px-6 md:px-10 border-t border-gray-900" id="biography-ticket">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          
+          <!-- KOLOM 1: RINGKASAN BIOGRAFI (Seringkas-ringkasnya) -->
+          <div class="space-y-6" data-aos="fade-right" data-aos-once="true">
+            <h2 class="text-3xl font-bold" style="color: aqua; font-family: Audiowide, serif;">ABOUT ME</h2>
+            <div class="w-16 h-1 bg-cyan-400 rounded-full"></div>
+            
+            <p class="text-gray-300 text-justify leading-relaxed text-sm md:text-base font-light">
+              <strong class="text-white">Muhammad Ibnu Rojab (Ibnu/Benu)</strong>, mahasiswa Komunikasi UIN SATU Tulungagung asal Lamongan yang tumbuh besar di Tangerang. Menggabungkan antusiasme tinggi di dunia <span class="text-cyan-400 font-medium">Gaming (MOBA/Battle-Royale)</span> dengan ambisi besar di bidang teknologi[cite: 1]. Belajar pemrograman secara otodidak dengan fokus pada <span class="text-cyan-400 font-medium">Frontend Development & AI Automation</span> demi mengejar impian menjadi developer profesional di masa depan.
             </p>
+          </div>
+
+          <!-- KOLOM 2: INTERACTIVE DEV PASS TICKET -->
+          <div class="flex justify-center items-center" data-aos="fade-left" data-aos-once="true">
+            
+            <!-- Custom CSS Khusus Tiket (Isolasi agar aman) -->
+            <style>
+              .ticket-canvas {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1em;
+              }
+              .ticket-wrapper {
+                --t-bg: #111827; /* Menyesuaikan tailwind gray-900 */
+                --t-bg-light: #1f2937; /* Menyesuaikan tailwind gray-800 */
+                --t-accent: #00ffff; /* Diubah ke Aqua/Cyan agar serasi dengan web kamu */
+                --t-accent-glow: rgba(0, 255, 255, 0.3);
+                --t-text-main: #f8fafc;
+                --t-text-muted: #94a3b8;
+                font-size: 11px;
+                perspective: 1000px;
+                display: inline-block;
+              }
+              .ticket {
+                position: relative;
+                width: 24em;
+                color: var(--t-text-main);
+                font-family: "Segoe UI", system-ui, sans-serif;
+                transform-style: preserve-3d;
+                transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s ease;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05);
+                background: transparent;
+                filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+              }
+              .ticket-wrapper:hover .ticket {
+                transform: rotateX(8deg) rotateY(-12deg) scale(1.04);
+                box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1), -5px -5px 20px var(--t-accent-glow);
+              }
+              .ticket::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 1em;
+                pointer-events: none;
+                background: linear-gradient(115deg, transparent 0%, transparent 40%, rgba(255, 255, 255, 0.1) 45%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 55%, transparent 60%, transparent 100%);
+                z-index: 10;
+                background-size: 250% 250%;
+                background-position: 100% 100%;
+                transition: background-position 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                mix-blend-mode: overlay;
+              }
+              .ticket-wrapper:hover .ticket::after {
+                background-position: 0% 0%;
+              }
+              .t-main {
+                padding: 2em;
+                position: relative;
+                overflow: hidden;
+                background: radial-gradient(circle at bottom left, transparent 1em, var(--t-bg) 1.05em), radial-gradient(circle at bottom right, transparent 1em, var(--t-bg) 1.05em);
+                background-size: 51% 100%;
+                background-position: bottom left, bottom right;
+                background-repeat: no-repeat;
+                border-top-left-radius: 1em;
+                border-top-right-radius: 1em;
+              }
+              .t-main::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(rgba(0, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.08) 1px, transparent 1px);
+                background-size: 2em 2em;
+                opacity: 0.6;
+                z-index: 0;
+                pointer-events: none;
+                transform: perspective(500px) rotateX(20deg) scale(1.5);
+                animation: grid-scroll 20s linear infinite;
+              }
+              @keyframes grid-scroll {
+                0% { background-position: 0 0; }
+                100% { background-position: 0 4em; }
+              }
+              .t-content { position: relative; z-index: 1; }
+              .t-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2em; }
+              .t-logo { display: flex; align-items: center; gap: 0.5em; font-weight: 900; font-size: 1.2em; letter-spacing: -0.05em; color: #fff; }
+              .t-logo svg { width: 1.5em; height: 1.5em; fill: var(--t-accent); filter: drop-shadow(0 0 5px var(--t-accent)); animation: logo-pulse 3s ease-in-out infinite alternate; }
+              @keyframes logo-pulse {
+                0% { filter: drop-shadow(0 0 2px var(--t-accent)); }
+                100% { filter: drop-shadow(0 0 10px var(--t-accent)) brightness(1.2); }
+              }
+              .t-type { font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.2em; color: var(--t-accent); border: 1px solid var(--t-accent); padding: 0.4em 0.8em; border-radius: 99em; font-weight: 700; }
+              .t-title { font-size: 2.3em; font-weight: 900; line-height: 1.1; margin-bottom: 0.2em; text-transform: uppercase; background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+              .t-subtitle { color: var(--t-text-muted); font-size: 0.9em; margin-bottom: 2.5em; }
+              .t-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5em; margin-bottom: 1em; }
+              .t-detail-item { display: flex; flex-direction: column; gap: 0.2em; text-align: left; }
+              .t-label { font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.1em; color: var(--t-text-muted); }
+              .t-value { font-size: 1.1em; font-weight: 700; color: var(--t-text-main); }
+              .t-perforation { display: flex; justify-content: space-between; height: 1em; align-items: center; position: relative; z-index: 2; }
+              .t-perf-line { flex-grow: 1; height: 0; border-top: 2px dashed rgba(255, 255, 255, 0.2); margin: 0 1.5em; }
+              .t-stub { padding: 2em; background: radial-gradient(circle at top left, transparent 1em, var(--t-bg-light) 1.05em), radial-gradient(circle at top right, transparent 1em, var(--t-bg-light) 1.05em); background-size: 51% 100%; background-position: top left, top right; background-repeat: no-repeat; border-bottom-left-radius: 1em; border-bottom-right-radius: 1em; display: flex; justify-content: space-between; align-items: center; position: relative; }
+              .t-barcode-container { display: flex; flex-direction: column; gap: 0.5em; text-align: left; }
+              .t-barcode { width: 10em; height: 3em; background: repeating-linear-gradient(90deg, #fff 0, #fff 2px, transparent 2px, transparent 4px, #fff 4px, #fff 5px, transparent 5px, transparent 8px, #fff 8px, #fff 12px, transparent 12px, transparent 15px, #fff 15px, #fff 16px, transparent 16px, transparent 18px); opacity: 0.8; }
+              .t-barcode-id { font-family: monospace; font-size: 0.7em; color: var(--t-text-muted); letter-spacing: 0.2em; }
+              .t-admit { text-align: right; }
+              .t-admit-text { font-size: 0.7em; text-transform: uppercase; letter-spacing: 0.1em; color: var(--t-text-muted); }
+              .t-admit-num { font-size: 3em; font-weight: 900; line-height: 1; color: var(--t-accent); text-shadow: 0 0 15px var(--t-accent-glow); }
+              .ticket-wrapper:active .ticket { transform: rotateX(15deg) rotateY(-5deg) scale(0.98); }
+              .ticket-wrapper:active .t-stub { transform: translateY(5px) rotateZ(2deg); opacity: 0.8; transition: transform 0.2s ease, opacity 0.2s ease; }
+            </style>
+
+            <!-- Struktur HTML Tiket -->
+            <div class="ticket-canvas">
+              <div class="ticket-wrapper">
+                <div class="ticket">
+                  <div class="t-main">
+                    <div class="t-content">
+                      <div class="t-header">
+                        <div class="t-logo">
+                          <svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          BENUTZY
+                        </div>
+                        <div class="t-type">Dev Pass</div>
+                      </div>
+                      <div class="t-title">Benu's<br />Not Human</div>
+                      <div class="t-subtitle">Global Developer Portfolio Access</div>
+                      <div class="t-details">
+                        <div class="t-detail-item">
+                          <span class="t-label">Name</span><span class="t-value">Ryomen Benu</span>
+                        </div>
+                        <!-- <div class="t-detail-item">
+                          <span class="t-label">Role</span><span class="t-value">AI</span>
+                        </div> -->
+                        <div class="t-detail-item">
+                          <span class="t-label">Venue</span><span class="t-value">Tangerang</span>
+                        </div>
+                        <div class="t-detail-item">
+                          <span class="t-label">Gateway</span><span class="t-value">Sector 7G</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="t-perforation" style="position: absolute; bottom: 0; left: 0; width: 100%; transform: translateY(50%);">
+                      <div class="t-perf-line"></div>
+                    </div>
+                  </div>
+                  <div class="t-stub">
+                    <div class="t-barcode-container">
+                      <div class="t-barcode"></div>
+                      <div class="t-barcode-id">FORBIDDEN-2026</div>
+                    </div>
+                    <div class="t-admit">
+                      <div class="t-admit-text">Seat</div>
+                      <div class="t-admit-num">09</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <div class="flex justify-center bg-base-200 py-5">
-        <h2 data-aos="fade-up" data-aos-once="true" class="text-3xl font-bold" style="color: aqua; font-family: Audiowide, serif;">Study</h2>
-      </div>
-      
-      <div class="flex justify-center bg-base-200">
-        <ul class="timeline timeline-vertical bg-base-200 py-5">
-          <li class="flex justify-start">
-            <div class="timeline-start">2012</div>
-            <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="h-5 w-5">
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-            <div class="timeline-end timeline-box">SDN Talagasari 1 Balaraja</div>
-          </li>
-          <li class="flex justify-start">
-            <div class="timeline-start">2018</div>
-            <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="h-5 w-5">
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-            <div class="timeline-end timeline-box">MTs. Darul Hikam</div>
-          </li>
-          <li class="flex justify-start">
-            <div class="timeline-start">2021</div>
-            <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="h-5 w-5">
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-            <div class="timeline-end timeline-box">MA Matholi'ul Anwar</div>
-          </li>
-          <li class="flex justify-start">
-            <div class="timeline-start">2024</div>
-            <div class="timeline-middle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="h-5 w-5">
-                <path
-                  fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd" />
-              </svg>
-            </div>
-            <div class="timeline-end timeline-box">UINSATU</div>
-          </li>
-        </ul>
-      </div>
+      <div class="bg-base-200 py-16 px-6 md:px-10" id="skills">
+        <div class="max-w-4xl mx-auto">
+          
+          <!-- Judul Section -->
+          <div class="text-center mb-12" data-aos="fade-up" data-aos-once="true">
+            <h2 class="text-3xl font-bold" style="color: aqua; font-family: Audiowide, serif;">Capabilities</h2>
+            <div class="w-16 h-1 bg-cyan-400 mx-auto mt-3 rounded-full"></div>
+          </div>
 
-      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
-        <p>Ibnu lahir di kota Lamongan yang tak lama setelah kelahirannya dia dibawa dan di besarkan di kota Tangerang. Pada tahun 2010 Ibnu mengawali pendidikannya di TK-RA Al-Ikhwan di usianya yang masih 4 tahun. Yang menjadi spesial-nya Ibnu saat itu adalah dia sudah bisa membaca dan menulis dari sebelum dia masuk TK. Setelah 2 tahun di TK, Ibnu melanjutkan studi di SDN Talagasari 1 Balaraja. Memang tidak ada prestasi yang didapatkan, tetapi Ibnu pernah 2x menjadi perwakilan lomba cerdas cermat PAI. Semua itu karena Ibnu sudah mendapatkan bekal pendidikan agama sejak kecil dari orang tuanya.
-        </p> 
-      </div>
+          <!-- Grid Utama: 2 Kolom -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Kolom Kiri: Hard Skills -->
+            <div class="bg-base-100 p-8 rounded-2xl border border-cyan-500/20 shadow-xl" data-aos="fade-right" data-aos-once="true" data-aos-duration="1000">
+              <h3 class="text-xl font-bold mb-6" style="color: aqua; font-family: Audiowide, serif;">HARD SKILLS</h3>
+              <div class="space-y-5">
+                
+                <!-- Skill 1 -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="font-medium text-gray-200">Frontend Developer</span>
+                    <span class="text-gray-400">Advanced</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-gray-800 rounded-full">
+                    <div class="h-full bg-cyan-400 rounded-full" style="width: 85%"></div>
+                  </div>
+                </div>
 
-      <!-- <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
-      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DIqceh6RNLb/" data-instgrm-version="14" style=" background: transparent; border:0; border-radius:3px; margin: 1px; max-width:540px; min-width:326px; padding:0; width:100%;">
-      <script async src="https://www.instagram.com/embed.js"></script>
-      </div> -->
+                <!-- Skill 2 -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="font-medium text-gray-200">UI/UX Designer</span>
+                    <span class="text-gray-400">Advanced</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-gray-800 rounded-full">
+                    <div class="h-full bg-cyan-400 rounded-full" style="width: 80%"></div>
+                  </div>
+                </div>
 
-      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
-        <p>Enam tahun berlalu dan Ibnu harus ikut kedua orang tuanya pindah ke kampung halamannya di Lamongan untuk melanjutkan sekolahnya di MTs. Darul Hikam, meninggalkan teman-teman dan lingkungan yang jauh dari perkotaan. Dan di saat itulah kebodohan dan sifat malas menyerang. Bayangkan saja siswa yang selalu masuk 5 besar di kelasnya, kini menjadi seorang yang memiliki sifat pemalas karena terpengaruh oleh teman di sekitarnya. Namun mulai dari MTs. Ibnu mengekan teknologi digital karena adanya mata pelajaran TIK, sejak saat itu mulai tertarik dengan yang namanya teknologi.
-        </p> 
-      </div>
+                <!-- Skill 3 -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="font-medium text-gray-200">AI Automation</span>
+                    <span class="text-gray-400">Intermediate</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-gray-800 rounded-full">
+                    <div class="h-full bg-cyan-400 rounded-full" style="width: 75%"></div>
+                  </div>
+                </div>
 
-      <div class="flex justify-center bg-base-200 px-10 py-10 text-justify">
-        <p>Karena ketertarikannya dengan teknologi, setelah lulus akhirnya dia melanjutkan study di MA Matholi'ul Anwar dan mengambil jurusan MIPA-TI. Hehehe.... sebenarnya Ibnu ambil jurusan MIPA-TI bukan karena kemauannya, tetapi karena ikut-ikut temannya saja, tapi anehnya Ibnu justru yang malah terpilih sedangkan temannya tidak. Awal-awal memang Ibnu hanya belajar tentang <i>Microsoft Office</i>, tetapi ada di suatu waktu Ibnu mengikuti Mawar.Dev, yaitu ekstrakurukuler yang mengajarkan <i>web development</i>. Ibnu belajar selama 1 tahun, yahhh.... walaupun hanya sampai HTML dan CSS. Tiba di semester terkhir Ibnu pun mulai mempersiapkan kelulusannya sembari memilih kampus impiannya untuk SNBP, namun tak lama selang waktu itu kabar menyedihkan tiba, yaitu Ibnu tidak memenuhi kriteria siswa eligible. Impiannya untuk menjadi <i><b>Front-End Developer</b></i> seakan sirna. Akhirnya Ibnu mengambil jalan ninja dengan ikut jalur SPAN-PTKIN di UINSATU Tulungagung program studi Kumunikasi dan Penyiaran Islam. Dengan jiwa pantang menyerahnya Ibnu tetap melanjutkan belajar coding walaupun dengan jalur otodidak.
-        </p> 
+                <!-- Skill 4 -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="font-medium text-gray-200">Stock Analysis (Bandarmology)</span>
+                    <span class="text-gray-400">Intermediate</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-gray-800 rounded-full">
+                    <div class="h-full bg-cyan-400 rounded-full" style="width: 80%"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Kolom Kanan: Soft Skills -->
+            <div class="bg-base-100 p-8 rounded-2xl border border-cyan-500/20 shadow-xl" data-aos="fade-left" data-aos-once="true" data-aos-duration="1000">
+              <h3 class="text-xl font-bold mb-6" style="color: aqua; font-family: Audiowide, serif;">SOFT SKILLS</h3>
+              <div class="space-y-5">
+                
+                <!-- Soft Skill 1 -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span class="font-medium text-gray-200">Prompt Engineer</span>
+                    <span class="text-gray-400">Expert</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-gray-800 rounded-full">
+                    <div class="h-full bg-cyan-400 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       <div class="hero bg-base-200 w-full">
